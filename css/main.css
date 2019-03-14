@@ -1996,7 +1996,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8aee4a;
+  background: #adff7a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2724,7 +2724,7 @@ hr {
   right: -100%;
 }
 .site-subtitle {
-  display: none;
+  display: block;
 }
 .site-nav-toggle {
   position: static;
