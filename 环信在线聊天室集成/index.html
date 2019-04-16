@@ -98,24 +98,25 @@
 
 
 
-  <meta name="keywords" content="JS设计模式">
+  <meta name="description" content="最近公司项目中需要一个网页聊天室功能，由于需求比较简单聊天室只需具备基本的聊天功能即可。我们采用了环信webIM快速实现。">
+<meta name="keywords" content="环信webIM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代理模式">
-<meta property="og:url" content="https://easonfang.github.io/代理模式/index.html">
+<meta property="og:title" content="利用环信webIM API搭建简易在线聊天室">
+<meta property="og:url" content="https://easonfang.github.io/环信在线聊天室集成/index.html">
 <meta property="og:site_name" content="FUNXIA">
+<meta property="og:description" content="最近公司项目中需要一个网页聊天室功能，由于需求比较简单聊天室只需具备基本的聊天功能即可。我们采用了环信webIM快速实现。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://easonfang.github.io/代理模式/index.html">
-<meta property="og:updated_time" content="2019-03-15T09:42:17.759Z">
+<meta property="og:updated_time" content="2019-04-16T07:15:18.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="代理模式">
-<meta name="twitter:image" content="https://easonfang.github.io/代理模式/index.html">
+<meta name="twitter:title" content="利用环信webIM API搭建简易在线聊天室">
+<meta name="twitter:description" content="最近公司项目中需要一个网页聊天室功能，由于需求比较简单聊天室只需具备基本的聊天功能即可。我们采用了环信webIM快速实现。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://easonfang.github.io/代理模式/">
+  <link rel="canonical" href="https://easonfang.github.io/环信在线聊天室集成/">
 
 
 
@@ -125,7 +126,7 @@
   };
 </script>
 
-  <title>代理模式 | FUNXIA</title>
+  <title>利用环信webIM API搭建简易在线聊天室 | FUNXIA</title>
   
 
 
@@ -383,7 +384,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://easonfang.github.io/代理模式/">
+    <link itemprop="mainEntityOfPage" href="https://easonfang.github.io/环信在线聊天室集成/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fangpeng">
@@ -400,7 +401,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">代理模式
+          <h1 class="post-title" itemprop="name headline">利用环信webIM API搭建简易在线聊天室
 
               
             
@@ -426,7 +427,7 @@
                 
               
 
-              <time title="创建时间：2019-03-15 17:30:30" itemprop="dateCreated datePublished" datetime="2019-03-15T17:30:30+08:00">2019-03-15</time>
+              <time title="创建时间：2019-04-16 14:08:52" itemprop="dateCreated datePublished" datetime="2019-04-16T14:08:52+08:00">2019-04-16</time>
             
 
             
@@ -486,14 +487,13 @@
       
 
       
-        <p class="description"></p>
-
-<p><img src="https://" alt style="width:100%"></p>
-<a id="more"></a>
-<p>##</p>
-<p>##</p>
-<p>##</p>
-<hr>
+        <p>  最近公司项目中需要一个网页聊天室功能，由于需求比较简单聊天室只需具备基本的聊天功能即可。<br>我们采用了环信webIM快速实现。<br><a id="more"></a><br>环信 Web IM SDK 为PC/移动 Web 应用，提供完善的即时通信功能开发能力，屏蔽其内部复杂细节，对外提供较为简洁的 API 接口，方便第三方应 用快速集成即时通信功能。</p>
+<p>注意：如果您是 Web SDK 的新用户，请参考本文档集成最新版本。 新版的 SDK 保证兼容旧版sdk的所有接口，同时提供了一些新的接口，所以 新版的 SDK 可以直接替换旧版的 SDK</p>
+<h3 id="环信webIM-SDK功能说明"><a href="#环信webIM-SDK功能说明" class="headerlink" title="环信webIM SDK功能说明"></a>环信webIM SDK功能说明</h3><p>Easemob Web IM SDK 已支持如下功能：</p>
+<p>SDK 本身已支持 IE8+、FireFox10+、Chrome54+、Safari6+ 之间文本、表情、图片、音频、地址消息相互发送。<br>SDK 支持 Web 端之间，Web 端与 Android/iOS 端相互添加、删除好友功能。<br>SDK 支持与 iOS、Android SDK 之间相互发送文本、表情、图片、音频、地址消息。<br>SDK 对于消息的处理方式如下：<br>文本、表情消息，直接发送、接收。<br>附件消息（图片、音频、文件等），SDK 上传附件到服务器，然后发送附件基本信息（发送方上传的附件 URL、文件名等），接收方根据附件的 URL、secret 和自身的登录信息，以流的形式从服务器上下载到本地处理。<br>SDK 支持浏览器本地缓存(IndexDB)<br>提供 Demo，方便大家参考，已实现聊天、添加/删除好友、群组管理、黑名单、音视频功能。备注：<br>Demo 默认支持的图片消息格式：PNG、JPG、BMP、GIF<br>Demo 默认支持的音频消息格式：MP3、AMR、WMV<br>Demo 默认支持的文件消息格式：zip、txt、doc、PDF</p>
+<h3 id="创建连接"><a href="#创建连接" class="headerlink" title="创建连接"></a>创建连接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var conn = &#123;&#125;;</span><br><span class="line">WebIM.config = config;</span><br><span class="line">conn = WebIM.conn = new WebIM.connection(&#123;</span><br><span class="line">    isHttpDNS: WebIM.config.isHttpDNS,</span><br><span class="line">    isMultiLoginSessions: WebIM.config.isMultiLoginSessions,</span><br><span class="line">    https: WebIM.config.https,</span><br><span class="line">    url: WebIM.config.xmppURL,</span><br><span class="line">    isAutoLogin: false,</span><br><span class="line">    heartBeatWait: WebIM.config.heartBeatWait,</span><br><span class="line">    autoReconnectNumMax: WebIM.config.autoReconnectNumMax,</span><br><span class="line">    autoReconnectInterval: WebIM.config.autoReconnectInterval,</span><br><span class="line">    isStropheLog: WebIM.config.isStropheLog,</span><br><span class="line">    delivery: WebIM.config.delivery</span><br><span class="line">&#125;)</span><br><span class="line">// WebIM.config 为之前集成里介绍的WebIMConfig.js</span><br></pre></td></tr></table></figure>
+<h3 id="添加回调函数"><a href="#添加回调函数" class="headerlink" title="添加回调函数"></a>添加回调函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">conn.listen(&#123;</span><br><span class="line">    onOpened: function ( message ) &#123;          //连接成功回调</span><br><span class="line">        // 如果isAutoLogin设置为false，那么必须手动设置上线，否则无法收消息</span><br><span class="line">        // 手动上线指的是调用conn.setPresence(); 如果conn初始化时已将isAutoLogin设置为true</span><br><span class="line">        // 则无需调用conn.setPresence();             </span><br><span class="line">    &#125;,  </span><br><span class="line">    onClosed: function ( message ) &#123;&#125;,         //连接关闭回调</span><br><span class="line">    onTextMessage: function ( message ) &#123;&#125;,    //收到文本消息</span><br><span class="line">    onEmojiMessage: function ( message ) &#123;&#125;,   //收到表情消息</span><br><span class="line">    onPictureMessage: function ( message ) &#123;&#125;, //收到图片消息</span><br><span class="line">    onCmdMessage: function ( message ) &#123;&#125;,     //收到命令消息</span><br><span class="line">    onAudioMessage: function ( message ) &#123;&#125;,   //收到音频消息</span><br><span class="line">    onLocationMessage: function ( message ) &#123;&#125;,//收到位置消息</span><br><span class="line">    onFileMessage: function ( message ) &#123;&#125;,    //收到文件消息</span><br><span class="line">    onVideoMessage: function (message) &#123;</span><br><span class="line">        var node = document.getElementById(&apos;privateVideo&apos;);</span><br><span class="line">        var option = &#123;</span><br><span class="line">            url: message.url,</span><br><span class="line">            headers: &#123;</span><br><span class="line">              &apos;Accept&apos;: &apos;audio/mp4&apos;</span><br><span class="line">            &#125;,</span><br><span class="line">            onFileDownloadComplete: function (response) &#123;</span><br><span class="line">                var objectURL = WebIM.utils.parseDownloadResponse.call(conn, response);</span><br><span class="line">                node.src = objectURL;</span><br><span class="line">            &#125;,</span><br><span class="line">            onFileDownloadError: function () &#123;</span><br><span class="line">                console.log(&apos;File down load error.&apos;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        WebIM.utils.download.call(conn, option);</span><br><span class="line">    &#125;,   //收到视频消息</span><br><span class="line">    onPresence: function ( message ) &#123;&#125;,       //处理“广播”或“发布-订阅”消息，如联系人订阅请求、处理群组、聊天室被踢解散等消息</span><br><span class="line">    onRoster: function ( message ) &#123;&#125;,         //处理好友申请</span><br><span class="line">    onInviteMessage: function ( message ) &#123;&#125;,  //处理群组邀请</span><br><span class="line">    onOnline: function () &#123;&#125;,                  //本机网络连接成功</span><br><span class="line">    onOffline: function () &#123;&#125;,                 //本机网络掉线</span><br><span class="line">    onError: function ( message ) &#123;&#125;,          //失败回调</span><br><span class="line">    onBlacklistUpdate: function (list) &#123;       //黑名单变动</span><br><span class="line">        // 查询黑名单，将好友拉黑，将好友从黑名单移除都会回调这个函数，list则是黑名单现有的所有好友信息</span><br><span class="line">        console.log(list);</span><br><span class="line">    &#125;,</span><br><span class="line">    onReceivedMessage: function(message)&#123;&#125;,    //收到消息送达服务器回执</span><br><span class="line">    onDeliveredMessage: function(message)&#123;&#125;,   //收到消息送达客户端回执</span><br><span class="line">    onReadMessage: function(message)&#123;&#125;,        //收到消息已读回执</span><br><span class="line">    onCreateGroup: function(message)&#123;&#125;,        //创建群组成功回执（需调用createGroupNew）</span><br><span class="line">    onMutedMessage: function(message)&#123;&#125;        //如果用户在A群组被禁言，在A群发消息会走这个回调并且消息不会传递给群其它成员</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="单聊发送文本信息"><a href="#单聊发送文本信息" class="headerlink" title="单聊发送文本信息"></a>单聊发送文本信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var sendPrivateText = function () &#123;</span><br><span class="line">    var id = conn.getUniqueId();                 // 生成本地消息id</span><br><span class="line">    var msg = new WebIM.message(&apos;txt&apos;, id);      // 创建文本消息</span><br><span class="line">    msg.set(&#123;</span><br><span class="line">        msg: &apos;message content&apos;,                  // 消息内容</span><br><span class="line">        to: &apos;username&apos;,                          // 接收消息对象（用户id）</span><br><span class="line">        roomType: false,                          </span><br><span class="line">        success: function (id, serverMsgId) &#123;</span><br><span class="line">            console.log(&apos;send private text Success&apos;);  </span><br><span class="line">        &#125;,                                       // 对成功的相关定义，sdk会将消息id登记到日志进行备份处理</span><br><span class="line">        fail: function(e)&#123;</span><br><span class="line">            console.log(&quot;Send private text error&quot;);  </span><br><span class="line">        &#125;                                        // 对失败的相关定义，sdk会将消息id登记到日志进行备份处理</span><br><span class="line">    &#125;);</span><br><span class="line">    conn.send(msg.body);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -516,7 +516,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JS设计模式/" rel="tag"><i class="fa fa-tags"></i> JS设计模式</a>
+            <a href="/tags/环信webIM/" rel="tag"><i class="fa fa-tags"></i> 环信webIM</a>
           
         </div>
       
@@ -529,8 +529,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/观察者模式/" rel="next" title="观察者模式">
-                <i class="fa fa-chevron-left"></i> 观察者模式
+              <a href="/代理模式/" rel="next" title="代理模式">
+                <i class="fa fa-chevron-left"></i> 代理模式
               </a>
             
           </div>
@@ -538,10 +538,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/环信在线聊天室集成/" rel="prev" title="利用环信webIM API搭建简易在线聊天室">
-                利用环信webIM API搭建简易在线聊天室 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -585,8 +581,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -668,6 +673,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#环信webIM-SDK功能说明"><span class="nav-number">1.</span> <span class="nav-text">环信webIM SDK功能说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建连接"><span class="nav-number">2.</span> <span class="nav-text">创建连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加回调函数"><span class="nav-number">3.</span> <span class="nav-text">添加回调函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单聊发送文本信息"><span class="nav-number">4.</span> <span class="nav-text">单聊发送文本信息</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

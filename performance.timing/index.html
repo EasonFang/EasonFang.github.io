@@ -98,24 +98,24 @@
 
 
 
-  <meta name="keywords" content="JS设计模式">
+  <meta name="description" content="利用window.performance.timing进行性能分析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代理模式">
-<meta property="og:url" content="https://easonfang.github.io/代理模式/index.html">
+<meta property="og:title" content="浏览器性能接口performance.timing">
+<meta property="og:url" content="https://easonfang.github.io/performance.timing/index.html">
 <meta property="og:site_name" content="FUNXIA">
+<meta property="og:description" content="利用window.performance.timing进行性能分析">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://easonfang.github.io/代理模式/index.html">
-<meta property="og:updated_time" content="2019-03-15T09:42:17.759Z">
+<meta property="og:updated_time" content="2019-04-16T06:49:35.371Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="代理模式">
-<meta name="twitter:image" content="https://easonfang.github.io/代理模式/index.html">
+<meta name="twitter:title" content="浏览器性能接口performance.timing">
+<meta name="twitter:description" content="利用window.performance.timing进行性能分析">
 
 
 
 
 
 
-  <link rel="canonical" href="https://easonfang.github.io/代理模式/">
+  <link rel="canonical" href="https://easonfang.github.io/performance.timing/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>代理模式 | FUNXIA</title>
+  <title>浏览器性能接口performance.timing | FUNXIA</title>
   
 
 
@@ -383,7 +383,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://easonfang.github.io/代理模式/">
+    <link itemprop="mainEntityOfPage" href="https://easonfang.github.io/performance.timing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fangpeng">
@@ -400,7 +400,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">代理模式
+          <h1 class="post-title" itemprop="name headline">浏览器性能接口performance.timing
 
               
             
@@ -426,30 +426,12 @@
                 
               
 
-              <time title="创建时间：2019-03-15 17:30:30" itemprop="dateCreated datePublished" datetime="2019-03-15T17:30:30+08:00">2019-03-15</time>
+              <time title="创建时间：2019-03-13 09:49:48" itemprop="dateCreated datePublished" datetime="2019-03-13T09:49:48+08:00">2019-03-13</time>
             
 
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端开发/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -486,14 +468,10 @@
       
 
       
-        <p class="description"></p>
-
-<p><img src="https://" alt style="width:100%"></p>
+        <p>利用window.performance.timing进行性能分析</p>
 <a id="more"></a>
-<p>##</p>
-<p>##</p>
-<p>##</p>
-<hr>
+<h3 id="window-performance-timing中相关属性语义："><a href="#window-performance-timing中相关属性语义：" class="headerlink" title="window.performance.timing中相关属性语义："></a>window.performance.timing中相关属性语义：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//  .navigationStart 准备加载页面的起始时间</span><br><span class="line">//  .unloadEventStart 如果前一个文档和当前文档同源,返回前一个文档开始unload的时间</span><br><span class="line">//  .unloadEventEnd 如果前一个文档和当前文档同源,返回前一个文档开始unload结束的时间</span><br><span class="line">//  .redirectStart   如果有重定向,这里是重定向开始的时间.</span><br><span class="line">//  .redirectEnd     如果有重定向,这里是重定向结束的时间.</span><br><span class="line">//  .fetchStart        开始检查缓存或开始获取资源的时间</span><br><span class="line">//  .domainLookupStart   开始进行dns查询的时间</span><br><span class="line">//  .domainLookupEnd     dns查询结束的时间</span><br><span class="line">//  .connectStart                  开始建立连接请求资源的时间</span><br><span class="line">//  .connectEnd                     建立连接成功的时间.</span><br><span class="line">//  .secureConnectionStart      如果是https请求.返回ssl握手的时间</span><br><span class="line">//  .requestStart                     开始请求文档时间(包括从服务器,本地缓存请求)</span><br><span class="line">//  .responseStart                   接收到第一个字节的时间</span><br><span class="line">//  .responseEnd                      接收到最后一个字节的时间.</span><br><span class="line">//  .domLoading                       ‘current document readiness’ 设置为 loading的时间 (这个时候还木有开始解析文档)</span><br><span class="line">//  .domInteractive               文档解析结束的时间</span><br><span class="line">//  .domContentLoadedEventStart    DOMContentLoaded事件开始的时间</span><br><span class="line">//  .domContentLoadedEventEnd      DOMContentLoaded事件结束的时间</span><br><span class="line">//  .domComplete        current document readiness被设置 complete的时间</span><br><span class="line">//  .loadEventStart      触发onload事件的时间</span><br><span class="line">//  .loadEventEnd       onload事件结束的时间</span><br></pre></td></tr></table></figure>
+<h3 id="主要性能分析指标"><a href="#主要性能分析指标" class="headerlink" title="主要性能分析指标"></a>主要性能分析指标</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    handleAddListener(<span class="string">'load'</span>, getTiming)</span><br><span class="line">    <span class="keyword">function</span> handleAddListener(<span class="built_in">type</span>, fn) &#123;</span><br><span class="line">        <span class="keyword">if</span>(window.addEventListener) &#123;</span><br><span class="line">            window.addEventListener(<span class="built_in">type</span>, fn)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            window.attachEvent(<span class="string">'on'</span> + <span class="built_in">type</span>, fn)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">getTiming</span></span>() &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            var time = performance.timing;</span><br><span class="line">            var timingObj = &#123;&#125;;</span><br><span class="line">            var loadTime = (time.loadEventEnd - time.loadEventStart) / 1000;</span><br><span class="line">            <span class="keyword">if</span>(loadTime &lt; 0) &#123;</span><br><span class="line">                setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">                    getTiming();</span><br><span class="line">                &#125;, 200);</span><br><span class="line">                <span class="built_in">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            timingObj[<span class="string">'重定向时间'</span>] = (time.redirectEnd - time.redirectStart) / 1000;</span><br><span class="line">            timingObj[<span class="string">'DNS解析时间'</span>] = (time.domainLookupEnd - time.domainLookupStart) / 1000;</span><br><span class="line">            timingObj[<span class="string">'TCP完成握手时间'</span>] = (time.connectEnd - time.connectStart) / 1000;</span><br><span class="line">            timingObj[<span class="string">'HTTP请求响应完成时间'</span>] = (time.responseEnd - time.requestStart) / 1000;</span><br><span class="line">            timingObj[<span class="string">'DOM开始加载前所花费时间'</span>] = (time.responseEnd - time.navigationStart) / 1000;</span><br><span class="line">            timingObj[<span class="string">'DOM加载完成时间'</span>] = (time.domComplete - time.domLoading) / 1000;</span><br><span class="line">            timingObj[<span class="string">'DOM结构解析完成时间'</span>] = (time.domInteractive - time.domLoading) / 1000;</span><br><span class="line">            timingObj[<span class="string">'脚本加载时间'</span>] = (time.domContentLoadedEventEnd - time.domContentLoadedEventStart) / 1000;</span><br><span class="line">            timingObj[<span class="string">'onload事件时间'</span>] = (time.loadEventEnd - time.loadEventStart) / 1000;</span><br><span class="line">            timingObj[<span class="string">'页面完全加载时间'</span>] = (timingObj[<span class="string">'重定向时间'</span>] + timingObj[<span class="string">'DNS解析时间'</span>] + timingObj[<span class="string">'TCP完成握手时间'</span>] + timingObj[<span class="string">'HTTP请求响应完成时间'</span>] + timingObj[<span class="string">'DOM结构解析完成时间'</span>] + timingObj[<span class="string">'DOM加载完成时间'</span>]);</span><br><span class="line">            <span class="keyword">for</span>(item <span class="keyword">in</span> timingObj) &#123;</span><br><span class="line">                console.log(item + <span class="string">":"</span> + timingObj[item] + <span class="string">'毫秒(ms)'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            console.log(performance.timing);</span><br><span class="line">        &#125; catch(e) &#123;</span><br><span class="line">            console.log(timingObj)</span><br><span class="line">            console.log(performance.timing);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -514,12 +492,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/JS设计模式/" rel="tag"><i class="fa fa-tags"></i> JS设计模式</a>
-          
-        </div>
-      
 
       
       
@@ -529,18 +501,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/观察者模式/" rel="next" title="观察者模式">
-                <i class="fa fa-chevron-left"></i> 观察者模式
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/环信在线聊天室集成/" rel="prev" title="利用环信webIM API搭建简易在线聊天室">
-                利用环信webIM API搭建简易在线聊天室 <i class="fa fa-chevron-right"></i>
+              <a href="/观察者模式/" rel="prev" title="观察者模式">
+                观察者模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -585,8 +553,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -668,6 +645,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#window-performance-timing中相关属性语义："><span class="nav-number">1.</span> <span class="nav-text">window.performance.timing中相关属性语义：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主要性能分析指标"><span class="nav-number">2.</span> <span class="nav-text">主要性能分析指标</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
